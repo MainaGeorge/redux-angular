@@ -4,13 +4,13 @@
       "id": 1,
       "title": "Master .NET",
       "author": "Dude Fella",
-      "cost": 20
+      "price": 20
     },
     {
       "id": 1,
       "title": "Master Angular",
       "author": "Baby Boss",
-      "cost": 20
+      "price": 20
     }
   ]
 }
