@@ -1,19 +1,10 @@
-import { createReducer } from '@ngrx/store';
+import { createReducer, on } from '@ngrx/store';
 import { Book } from './book';
+import { bookAPIonSuccess } from './book.actions';
 
-export const initialState: ReadonlyArray<Book> = [
-  {
-    id: 1,
-    title: 'Master .NET',
-    author: 'Dude Fella',
-    price: 20,
-  },
-  {
-    id: 1,
-    title: 'Master Angular',
-    author: 'Baby Boss',
-    price: 20,
-  },
-];
+export const initialState: ReadonlyArray<Book> = [];
 
-export const bookReducer = createReducer(initialState);
+export const bookReducer = createReducer(
+  initialState,
+  on(bookAPIonSuccess, (_, payload) => payload.allBooks)
+);
