@@ -11,6 +11,18 @@
       "title": "Master Angular",
       "author": "Baby Boss",
       "price": 20
+    },
+    {
+      "price": "10",
+      "title": "there",
+      "author": "here",
+      "id": 3
+    },
+    {
+      "price": "200",
+      "title": "nuria dinnbier",
+      "author": "the last living dragon",
+      "id": 4
     }
   ]
 }

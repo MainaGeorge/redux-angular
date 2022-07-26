@@ -1,12 +1,17 @@
-<div class="container">
+<div class="container" *ngIf="books$ | async">
+  <div class="row">
+    <div class="col col-md4 offset-md-4 mt-3 mb-3">
+      <a routerLink="/add" class="btn btn-dark">Add Book</a>
+    </div>
+  </div>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col" *ngFor="let book of books$ | async">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">{{ book.title }}</h5>
+          <h5 class="card-title">{{ book?.title }}</h5>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">{{ book.author }}</li>
-            <li class="list-group-item">{{ book.price }}</li>
+            <li class="list-group-item">{{ book?.author }}</li>
+            <li class="list-group-item">{{ book?.price }}</li>
           </ul>
         </div>
       </div>

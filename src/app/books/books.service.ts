@@ -11,4 +11,8 @@ export class BooksService {
   getBooks() {
     return this.http.get<Book[]>('http://localhost:3000/books');
   }
+
+  saveBook(book: Book) {
+    return this.http.post<Book>('http://localhost:3000/books', book);
+  }
 }

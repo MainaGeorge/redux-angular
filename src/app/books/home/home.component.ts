@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private store: Store) {}
 
   books$ = this.store.pipe(select(selectBooks));
+
   ngOnInit(): void {
     this.store.dispatch(invokeBooksAPI());
   }
